@@ -1,0 +1,29 @@
+.tableHeader {
+    position: relative;
+    display: grid;
+    border-bottom: 1px solid #e9e7f2;
+    background-color: #fff;
+    font-weight: 700 !important;
+
+    div:nth-child(1) {
+        padding-left: 20px;
+    }
+
+    &__stickyFirst {
+        *:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 1;
+        }
+    }
+
+    &__stickyLast {
+        *:last-child {
+            position: sticky;
+            right: 0;
+            z-index: 1;
+            border-left: 1px solid #e9e7f2;
+            padding-left: 20px;
+        }
+    }
+}

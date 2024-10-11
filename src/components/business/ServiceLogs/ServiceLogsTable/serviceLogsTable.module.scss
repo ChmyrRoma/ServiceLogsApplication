@@ -1,0 +1,35 @@
+.projectsTable {
+
+  &__tableCellHead {
+    display: flex;
+    font-weight: 700;
+    font-size: 12px;
+    padding-left: 30px;
+    color: #000000A6;
+
+    &_sort {
+      cursor: pointer;
+      &:hover {
+        background-color: #f7f7f7;
+      }
+    }
+
+    svg {
+      height: 15px;
+
+      border: none !important;
+      transform: rotate(180deg);
+    }
+
+    &_rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__paginationWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,44 @@
+.projectRow {
+    &__actionsCell {
+        border-left: 1px solid #e9e7f2;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    &__tableCell {
+        font-weight: 400;
+        padding-left: 30px;
+        font-size: 14px;
+        color: #000000A6;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        &_capitalize {
+            text-transform: capitalize;
+        }
+
+        &_green {
+            color: #2EC9A3;
+        }
+
+        &_yellow {
+            color: #FFC107;
+        }
+
+        &_red {
+            color: #f83434;
+        }
+
+        &_black {
+            color: #000000;
+        }
+
+        &_bold {
+            font-weight: 700;
+        }
+
+        &_grey {
+            color: #00000073;
+        }
+    }
+}

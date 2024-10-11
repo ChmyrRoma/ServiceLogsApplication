@@ -1,0 +1,159 @@
+.createDraft {
+    width: 600px;
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    background-color: white;
+    outline: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    animation: fadeInOut 0.8s 1;
+
+    @keyframes fadeInOut {
+        from {
+            transform: translateX(600px);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    &__mainContainer {
+        // padding: 15px 30px;
+        position: relative;
+    }
+
+    &__saveButton {
+        position: sticky;
+        top: 0px;
+        left: 0;
+        z-index: 999;
+
+        &_content {
+            display: flex;
+            gap: 7px;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+            font-size: small;
+            color: white;
+        }
+
+        &_saved {
+            background-color: #05b705;
+
+            svg {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        &_saving {
+            background-color: #007bff;
+
+            svg {
+                width: 15px;
+                height: 15px;
+                animation: spin 1s infinite linear;
+
+                @keyframes spin {
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+    }
+
+    &__closeButton {
+        float: right;
+        color: black;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__form {
+        // padding-top: 10px;
+        padding: 15px 30px;
+    }
+
+    &__title {
+        padding-bottom: 20px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 10px 0;
+        gap: 10px;
+
+        &_providerDetails {
+            width: 100%;
+        }
+
+        &_switch {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            float: right;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            padding: 0 3px;
+            background: #f6f4f4;
+            width: 160px;
+            height: 40px;
+        }
+
+        &_type {
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+            width: 60px;
+            height: 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        &_typeActive {
+            background-color: #007bff;
+            color: white;
+
+            &:hover {
+                background-color: #007bff;
+            }
+        }
+
+        &_typeInactive {
+            background-color: #dcd9d9;
+            color: black;
+        }
+
+
+        &_date {
+            width: 100%;
+        }
+    }
+
+    &__textarea {
+        position: relative;
+        width: 100%;
+
+        &_count {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &__error {
+        color: red;
+    }
+}

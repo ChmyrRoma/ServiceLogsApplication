@@ -1,0 +1,14 @@
+.main {
+    &__button {
+        cursor: pointer;
+        border: 1px solid silver;
+        padding: 5px;
+        width: 150px;
+        border-radius: 10px;
+        text-align: center;
+
+        &:hover {
+            background-color: #e8e5e5;
+        }
+    }
+}
